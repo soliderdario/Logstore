@@ -1,0 +1,22 @@
+﻿{
+    "profiles": {
+        "Logstore_Production": {
+            "commandName": "Project",
+            "launchBrowser": true,
+            "launchUrl": "swagger",
+            "environmentVariables": {
+                "ASPNETCORE_ENVIRONMENT": "Production"
+            },
+            "applicationUrl": "https://localhost:5001"
+        },
+        "Logstore_Development": {
+            "commandName": "Project",
+            "launchBrowser": true,
+            "launchUrl": "swagger",
+            "environmentVariables": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "applicationUrl": "https://localhost:5001"
+        }
+    }
+}

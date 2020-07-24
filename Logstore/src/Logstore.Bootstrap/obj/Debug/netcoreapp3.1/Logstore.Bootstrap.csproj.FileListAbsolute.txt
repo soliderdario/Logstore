@@ -1,0 +1,16 @@
+X:\GitHub\Logstore\Logstore\src\Logstore.Bootstrap\bin\Debug\netcoreapp3.1\Logstore.Bootstrap.deps.json
+X:\GitHub\Logstore\Logstore\src\Logstore.Bootstrap\bin\Debug\netcoreapp3.1\Logstore.Bootstrap.dll
+X:\GitHub\Logstore\Logstore\src\Logstore.Bootstrap\bin\Debug\netcoreapp3.1\Logstore.Bootstrap.pdb
+X:\GitHub\Logstore\Logstore\src\Logstore.Bootstrap\bin\Debug\netcoreapp3.1\Logdtore.Domain.dll
+X:\GitHub\Logstore\Logstore\src\Logstore.Bootstrap\bin\Debug\netcoreapp3.1\Logstore.Data.dll
+X:\GitHub\Logstore\Logstore\src\Logstore.Bootstrap\bin\Debug\netcoreapp3.1\Logstore.Infrastructure.dll
+X:\GitHub\Logstore\Logstore\src\Logstore.Bootstrap\bin\Debug\netcoreapp3.1\Logdtore.Domain.pdb
+X:\GitHub\Logstore\Logstore\src\Logstore.Bootstrap\bin\Debug\netcoreapp3.1\Logstore.Data.pdb
+X:\GitHub\Logstore\Logstore\src\Logstore.Bootstrap\bin\Debug\netcoreapp3.1\Logstore.Infrastructure.pdb
+X:\GitHub\Logstore\Logstore\src\Logstore.Bootstrap\obj\Debug\netcoreapp3.1\Logstore.Bootstrap.csprojAssemblyReference.cache
+X:\GitHub\Logstore\Logstore\src\Logstore.Bootstrap\obj\Debug\netcoreapp3.1\Logstore.Bootstrap.AssemblyInfoInputs.cache
+X:\GitHub\Logstore\Logstore\src\Logstore.Bootstrap\obj\Debug\netcoreapp3.1\Logstore.Bootstrap.AssemblyInfo.cs
+X:\GitHub\Logstore\Logstore\src\Logstore.Bootstrap\obj\Debug\netcoreapp3.1\Logstore.Bootstrap.csproj.CoreCompileInputs.cache
+X:\GitHub\Logstore\Logstore\src\Logstore.Bootstrap\obj\Debug\netcoreapp3.1\Logstore.Bootstrap.csproj.CopyComplete
+X:\GitHub\Logstore\Logstore\src\Logstore.Bootstrap\obj\Debug\netcoreapp3.1\Logstore.Bootstrap.dll
+X:\GitHub\Logstore\Logstore\src\Logstore.Bootstrap\obj\Debug\netcoreapp3.1\Logstore.Bootstrap.pdb

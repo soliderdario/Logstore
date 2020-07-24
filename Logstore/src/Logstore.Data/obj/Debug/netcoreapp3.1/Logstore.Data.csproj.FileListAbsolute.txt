@@ -1,0 +1,12 @@
+X:\GitHub\Logstore\Logstore\src\Logstore.Data\bin\Debug\netcoreapp3.1\Logstore.Data.deps.json
+X:\GitHub\Logstore\Logstore\src\Logstore.Data\bin\Debug\netcoreapp3.1\Logstore.Data.dll
+X:\GitHub\Logstore\Logstore\src\Logstore.Data\bin\Debug\netcoreapp3.1\Logstore.Data.pdb
+X:\GitHub\Logstore\Logstore\src\Logstore.Data\bin\Debug\netcoreapp3.1\Logdtore.Domain.dll
+X:\GitHub\Logstore\Logstore\src\Logstore.Data\bin\Debug\netcoreapp3.1\Logdtore.Domain.pdb
+X:\GitHub\Logstore\Logstore\src\Logstore.Data\obj\Debug\netcoreapp3.1\Logstore.Data.csprojAssemblyReference.cache
+X:\GitHub\Logstore\Logstore\src\Logstore.Data\obj\Debug\netcoreapp3.1\Logstore.Data.AssemblyInfoInputs.cache
+X:\GitHub\Logstore\Logstore\src\Logstore.Data\obj\Debug\netcoreapp3.1\Logstore.Data.AssemblyInfo.cs
+X:\GitHub\Logstore\Logstore\src\Logstore.Data\obj\Debug\netcoreapp3.1\Logstore.Data.csproj.CoreCompileInputs.cache
+X:\GitHub\Logstore\Logstore\src\Logstore.Data\obj\Debug\netcoreapp3.1\Logstore.Data.csproj.CopyComplete
+X:\GitHub\Logstore\Logstore\src\Logstore.Data\obj\Debug\netcoreapp3.1\Logstore.Data.dll
+X:\GitHub\Logstore\Logstore\src\Logstore.Data\obj\Debug\netcoreapp3.1\Logstore.Data.pdb
