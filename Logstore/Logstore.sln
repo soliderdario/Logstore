@@ -23,7 +23,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logstore.Data", "src\Logsto
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logstore.Menu", "src\Logstore.Menu\Logstore.Menu.csproj", "{D3F3C304-0A2A-4E07-9E7B-F011A3F18274}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logstore.Person", "src\Logstore.Person\Logstore.Person.csproj", "{7F4C42BF-4BF1-46ED-9069-F6E66D1CDC6C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logstore.Person", "src\Logstore.Person\Logstore.Person.csproj", "{7F4C42BF-4BF1-46ED-9069-F6E66D1CDC6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logstore.Sale", "src\Logstore.Sale\Logstore.Sale.csproj", "{E0FA33F6-942F-46B5-8FC0-BD4D96F7EDD1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,6 +57,10 @@ Global
 		{7F4C42BF-4BF1-46ED-9069-F6E66D1CDC6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F4C42BF-4BF1-46ED-9069-F6E66D1CDC6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F4C42BF-4BF1-46ED-9069-F6E66D1CDC6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0FA33F6-942F-46B5-8FC0-BD4D96F7EDD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0FA33F6-942F-46B5-8FC0-BD4D96F7EDD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0FA33F6-942F-46B5-8FC0-BD4D96F7EDD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0FA33F6-942F-46B5-8FC0-BD4D96F7EDD1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -66,6 +72,7 @@ Global
 		{7DB36C87-7CE5-4D8A-8949-CF7425BBA276} = {21843AF4-FCAB-420E-9EC2-DC45E8E2733B}
 		{D3F3C304-0A2A-4E07-9E7B-F011A3F18274} = {1D794FC7-A73F-4762-9C3B-9EE31C668BB5}
 		{7F4C42BF-4BF1-46ED-9069-F6E66D1CDC6C} = {1D794FC7-A73F-4762-9C3B-9EE31C668BB5}
+		{E0FA33F6-942F-46B5-8FC0-BD4D96F7EDD1} = {1D794FC7-A73F-4762-9C3B-9EE31C668BB5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2C02C792-1F7A-4636-A4EB-A8196B13861B}
