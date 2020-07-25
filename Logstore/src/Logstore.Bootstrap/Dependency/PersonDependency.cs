@@ -7,14 +7,14 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Logstore.Bootstrap.Dependency
 {
-    public static class MenuDependency
+    public static class PersonDependency
     {
-        public static IServiceCollection MenuResolveDependencies(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection PersonResolveDependencies(this IServiceCollection services, IConfiguration configuration)
         {
-            
+
             services.AddScoped<RepositoryBase>();
-            services.AddScoped<INotifier, Notifier>();            
-            services.AddScoped<IFlavorRepository, FlavorRepository>();
+            services.AddScoped<INotifier, Notifier>();
+            services.AddScoped<ICustomerRepository, CustomerRepository>();
             return services;
         }
     }

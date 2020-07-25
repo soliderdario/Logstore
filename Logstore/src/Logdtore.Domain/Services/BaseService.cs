@@ -2,9 +2,6 @@
 using FluentValidation.Results;
 using Logdtore.Domain.Model;
 using Logstore.Infrastructure.Notifiers;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Logstore.Domain.Services
 {

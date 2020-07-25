@@ -1139,7 +1139,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
-          "AutoMapper": "10.0.0",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.0.1",
           "Logstore.Data": "1.0.0",
           "Logstore.Domain": "1.0.0",
           "Logstore.Infrastructure": "1.0.0",

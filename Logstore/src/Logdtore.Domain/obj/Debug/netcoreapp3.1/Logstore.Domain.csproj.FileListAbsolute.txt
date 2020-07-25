@@ -1,12 +1,12 @@
 X:\GitHub\Logstore\Logstore\src\Logdtore.Domain\bin\Debug\netcoreapp3.1\Logstore.Domain.deps.json
 X:\GitHub\Logstore\Logstore\src\Logdtore.Domain\bin\Debug\netcoreapp3.1\Logstore.Domain.dll
 X:\GitHub\Logstore\Logstore\src\Logdtore.Domain\bin\Debug\netcoreapp3.1\Logstore.Domain.pdb
-X:\GitHub\Logstore\Logstore\src\Logdtore.Domain\obj\Debug\netcoreapp3.1\Logstore.Domain.AssemblyInfoInputs.cache
-X:\GitHub\Logstore\Logstore\src\Logdtore.Domain\obj\Debug\netcoreapp3.1\Logstore.Domain.AssemblyInfo.cs
-X:\GitHub\Logstore\Logstore\src\Logdtore.Domain\obj\Debug\netcoreapp3.1\Logstore.Domain.dll
-X:\GitHub\Logstore\Logstore\src\Logdtore.Domain\obj\Debug\netcoreapp3.1\Logstore.Domain.pdb
-X:\GitHub\Logstore\Logstore\src\Logdtore.Domain\obj\Debug\netcoreapp3.1\Logstore.Domain.csprojAssemblyReference.cache
 X:\GitHub\Logstore\Logstore\src\Logdtore.Domain\bin\Debug\netcoreapp3.1\Logstore.Infrastructure.dll
 X:\GitHub\Logstore\Logstore\src\Logdtore.Domain\bin\Debug\netcoreapp3.1\Logstore.Infrastructure.pdb
+X:\GitHub\Logstore\Logstore\src\Logdtore.Domain\obj\Debug\netcoreapp3.1\Logstore.Domain.csprojAssemblyReference.cache
+X:\GitHub\Logstore\Logstore\src\Logdtore.Domain\obj\Debug\netcoreapp3.1\Logstore.Domain.AssemblyInfoInputs.cache
+X:\GitHub\Logstore\Logstore\src\Logdtore.Domain\obj\Debug\netcoreapp3.1\Logstore.Domain.AssemblyInfo.cs
 X:\GitHub\Logstore\Logstore\src\Logdtore.Domain\obj\Debug\netcoreapp3.1\Logstore.Domain.csproj.CoreCompileInputs.cache
 X:\GitHub\Logstore\Logstore\src\Logdtore.Domain\obj\Debug\netcoreapp3.1\Logstore.Domain.csproj.CopyComplete
+X:\GitHub\Logstore\Logstore\src\Logdtore.Domain\obj\Debug\netcoreapp3.1\Logstore.Domain.dll
+X:\GitHub\Logstore\Logstore\src\Logdtore.Domain\obj\Debug\netcoreapp3.1\Logstore.Domain.pdb

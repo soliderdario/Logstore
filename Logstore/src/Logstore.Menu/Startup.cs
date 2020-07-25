@@ -20,11 +20,9 @@ namespace Logstore.Menu
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
-            DbConnection = new SqlConnection(Configuration.GetConnectionString("DefaultConnection"));
         }
 
-        public IConfiguration Configuration { get; }
-        public IDbConnection DbConnection { get; set; }
+        public IConfiguration Configuration { get; }       
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)

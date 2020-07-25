@@ -1,18 +1,15 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Logstore.Bootstrap.Setup;
-using Logstore.Bootstrap.Swagger;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
+using AutoMapper;
+using Logstore.Bootstrap.AutoMapper;
+using Logstore.Bootstrap.Dependency;
+using Logstore.Bootstrap.Setup;
+using Logstore.Bootstrap.Swagger;
+using Logstore.Data;
 
 namespace Logstore.Person
 {
@@ -28,10 +25,17 @@ namespace Logstore.Person
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
-
             // Json Configuration
             services.CustomJson();
+
+            //Auto Mapper Configuration 
+            services.AddAutoMapper(typeof(PersonAutomapper));
+
+            //Repository Configuration
+            services.Configure<RepositoryBase>(this.Configuration);
+
+            // Dependency Injection Configuration
+            services.PersonResolveDependencies(this.Configuration);
 
             //Api Versioning  Configuration
             services.CustomApiVersioning();
