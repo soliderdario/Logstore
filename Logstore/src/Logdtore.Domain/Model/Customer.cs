@@ -1,7 +1,9 @@
-﻿using Logdtore.Domain.Model;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using Logdtore.Domain.Model;
 
 namespace Logstore.Domain.Model
 {
+    [Table("Customer")]
     public class Customer : ModelBase
     {
         public string Name { get; set; }

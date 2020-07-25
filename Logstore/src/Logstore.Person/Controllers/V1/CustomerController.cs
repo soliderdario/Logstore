@@ -3,15 +3,13 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
-using Logdtore.Domain.Model;
-using Logdtore.Domain.View;
 using Logstore.Bootstrap;
 using Logstore.Domain.Interfaces;
 using Logstore.Infrastructure.Notifiers;
 using Logstore.Domain.View;
 using Logstore.Domain.Model;
 
-namespace Logstore.Menu.Controllers.V1
+namespace Logstore.Person.Controllers.V1
 {
     [ApiVersion("1.0")]
     [Route("api/v{version:apiVersion}/[controller]")]
@@ -29,17 +27,17 @@ namespace Logstore.Menu.Controllers.V1
         }
 
         [HttpGet("Query")]
-        public async Task<IEnumerable<FlavorView>> Query()
+        public async Task<IEnumerable<CustomerView>> Query()
         {
             try
             {
-                var result = _mapper.Map<IEnumerable<FlavorView>>(await _customerRepository.Query<Flavor>("Select * from Customer order by Name"));
+                var result = _mapper.Map<IEnumerable<CustomerView>>(await _customerRepository.Query<CustomerView>("Select * from Customer order by Name"));
                 return result;
             }
             catch (Exception ex)
             {
                 NotifyError(ex.Message);
-                return (IEnumerable<FlavorView>)BadRequest(ex.Message);
+                return (IEnumerable<CustomerView>)BadRequest(ex.Message);
             }
         }
 
@@ -72,7 +70,7 @@ namespace Logstore.Menu.Controllers.V1
         public async Task<IActionResult> Delete(long customerId)
         {
             try
-            {                
+            {
                 await _customerRepository.Delete(customerId);
             }
             catch (Exception ex)

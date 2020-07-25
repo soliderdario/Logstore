@@ -35,7 +35,7 @@ namespace Logstore.Data.Repository
         }
         private async Task Relationships(long customerId)
         {
-            var result = await _context.ExecuteScalar<int>("Select Count(*) from Order where CustomerId =@customerId", new { customerId });
+            var result = await _context.ExecuteScalar<int>("Select Count(*) from [Order] where CustomerId =@customerId", new { customerId });
             if (result > 0)
             {
                 _notifier.SetNotification(new Notification("Esse cliente não pode ser excluido por esta relacionado com uma ou mais tabelas!"));
