@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using Logdtore.Domain;
-using Logdtore.Domain.Interfaces;
 using Logdtore.Domain.Model;
+using Logdtore.Domain.View;
 using Logstore.Bootstrap;
+using Logstore.Domain.Interfaces;
 using Logstore.Infrastructure.Notifiers;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -16,32 +16,53 @@ namespace Logstore.Menu.Controllers.V1
     [Route("api/v{version:apiVersion}/[controller]")]
     public class FlavorController : MainController
     {
-        private readonly IUnitOfWork _unitOfWork;
+        
         private readonly IFlavorRepository _flavorRepository;
         public FlavorController(
             INotifier notifier,
             IMapper mapper,
-            IUnitOfWork unitOfWork,
             IFlavorRepository flavorRepository
             ) : base(notifier, mapper)
-        {
-            _unitOfWork = unitOfWork;
+        {            
             _flavorRepository = flavorRepository;
         }
-        [HttpGet]
-        public IActionResult Test()
+        [HttpGet("test")]
+        public async Task<IActionResult> Test()
+        {
+            try
+            {                
+                var flavor = new Flavor();                
+                flavor.Name = "Queijo";
+                flavor.Price = 20.00;
+                await _flavorRepository.Insert(flavor);
+
+                flavor.Name += $" update ";
+                await _flavorRepository.Update(flavor);
+            }
+            catch
+            {                
+
+            }
+            return CustomResponse();
+        }
+
+        [HttpGet("automapper")]
+        public async Task<IActionResult> Automapper()
         {
             try
             {
-                _unitOfWork.Begin();
-                var flavor = new Flavor();
-                _flavorRepository.Insert(flavor);
+                var Id = 11;
+                var flavors = await _flavorRepository.Query<Flavor>("Select Id, Name, Price from Flavor where Id = @Id", new {Id});
+                var flavorView = _mapper.Map<FlavorView>(flavors.FirstOrDefault());
 
-                _unitOfWork.Commit();
+                flavorView.Name = "Transaction";
+                var flavor = _mapper.Map<Flavor>(flavorView);
+                await _flavorRepository.Update(flavor);
+
+                
             }
             catch
             {
-                _unitOfWork.Rollback();
 
             }
             return CustomResponse();

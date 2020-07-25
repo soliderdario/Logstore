@@ -30,12 +30,10 @@ X:\GitHub\Logstore\Logstore\src\Logstore.Person\bin\Debug\netcoreapp3.1\runtimes
 X:\GitHub\Logstore\Logstore\src\Logstore.Person\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
 X:\GitHub\Logstore\Logstore\src\Logstore.Person\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 X:\GitHub\Logstore\Logstore\src\Logstore.Person\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
-X:\GitHub\Logstore\Logstore\src\Logstore.Person\bin\Debug\netcoreapp3.1\Logdtore.Domain.dll
 X:\GitHub\Logstore\Logstore\src\Logstore.Person\bin\Debug\netcoreapp3.1\Logstore.Bootstrap.dll
 X:\GitHub\Logstore\Logstore\src\Logstore.Person\bin\Debug\netcoreapp3.1\Logstore.Data.dll
 X:\GitHub\Logstore\Logstore\src\Logstore.Person\bin\Debug\netcoreapp3.1\Logstore.Infrastructure.dll
 X:\GitHub\Logstore\Logstore\src\Logstore.Person\bin\Debug\netcoreapp3.1\Logstore.Bootstrap.pdb
-X:\GitHub\Logstore\Logstore\src\Logstore.Person\bin\Debug\netcoreapp3.1\Logdtore.Domain.pdb
 X:\GitHub\Logstore\Logstore\src\Logstore.Person\bin\Debug\netcoreapp3.1\Logstore.Data.pdb
 X:\GitHub\Logstore\Logstore\src\Logstore.Person\bin\Debug\netcoreapp3.1\Logstore.Infrastructure.pdb
 X:\GitHub\Logstore\Logstore\src\Logstore.Person\obj\Debug\netcoreapp3.1\Logstore.Person.csprojAssemblyReference.cache
@@ -51,3 +49,5 @@ X:\GitHub\Logstore\Logstore\src\Logstore.Person\obj\Debug\netcoreapp3.1\staticwe
 X:\GitHub\Logstore\Logstore\src\Logstore.Person\obj\Debug\netcoreapp3.1\Logstore.Person.dll
 X:\GitHub\Logstore\Logstore\src\Logstore.Person\obj\Debug\netcoreapp3.1\Logstore.Person.pdb
 X:\GitHub\Logstore\Logstore\src\Logstore.Person\obj\Debug\netcoreapp3.1\Logstore.Person.genruntimeconfig.cache
+X:\GitHub\Logstore\Logstore\src\Logstore.Person\bin\Debug\netcoreapp3.1\Logstore.Domain.dll
+X:\GitHub\Logstore\Logstore\src\Logstore.Person\bin\Debug\netcoreapp3.1\Logstore.Domain.pdb

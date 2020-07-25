@@ -4,12 +4,12 @@
     "X:\\GitHub\\Logstore\\Logstore\\src\\Logstore.Person\\Logstore.Person.csproj": {}
   },
   "projects": {
-    "X:\\GitHub\\Logstore\\Logstore\\src\\Logdtore.Domain\\Logdtore.Domain.csproj": {
+    "X:\\GitHub\\Logstore\\Logstore\\src\\Logdtore.Domain\\Logstore.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "X:\\GitHub\\Logstore\\Logstore\\src\\Logdtore.Domain\\Logdtore.Domain.csproj",
-        "projectName": "Logdtore.Domain",
-        "projectPath": "X:\\GitHub\\Logstore\\Logstore\\src\\Logdtore.Domain\\Logdtore.Domain.csproj",
+        "projectUniqueName": "X:\\GitHub\\Logstore\\Logstore\\src\\Logdtore.Domain\\Logstore.Domain.csproj",
+        "projectName": "Logstore.Domain",
+        "projectPath": "X:\\GitHub\\Logstore\\Logstore\\src\\Logdtore.Domain\\Logstore.Domain.csproj",
         "packagesPath": "C:\\Users\\solid\\.nuget\\packages\\",
         "outputPath": "X:\\GitHub\\Logstore\\Logstore\\src\\Logdtore.Domain\\obj\\",
         "projectStyle": "PackageReference",
@@ -37,6 +37,12 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Dapper.Contrib": {
+              "target": "Package",
+              "version": "[2.0.35, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -79,8 +85,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "X:\\GitHub\\Logstore\\Logstore\\src\\Logdtore.Domain\\Logdtore.Domain.csproj": {
-                "projectPath": "X:\\GitHub\\Logstore\\Logstore\\src\\Logdtore.Domain\\Logdtore.Domain.csproj"
+              "X:\\GitHub\\Logstore\\Logstore\\src\\Logdtore.Domain\\Logstore.Domain.csproj": {
+                "projectPath": "X:\\GitHub\\Logstore\\Logstore\\src\\Logdtore.Domain\\Logstore.Domain.csproj"
               },
               "X:\\GitHub\\Logstore\\Logstore\\src\\Logstore.Data\\Logstore.Data.csproj": {
                 "projectPath": "X:\\GitHub\\Logstore\\Logstore\\src\\Logstore.Data\\Logstore.Data.csproj"
@@ -170,8 +176,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "X:\\GitHub\\Logstore\\Logstore\\src\\Logdtore.Domain\\Logdtore.Domain.csproj": {
-                "projectPath": "X:\\GitHub\\Logstore\\Logstore\\src\\Logdtore.Domain\\Logdtore.Domain.csproj"
+              "X:\\GitHub\\Logstore\\Logstore\\src\\Logdtore.Domain\\Logstore.Domain.csproj": {
+                "projectPath": "X:\\GitHub\\Logstore\\Logstore\\src\\Logdtore.Domain\\Logstore.Domain.csproj"
               }
             }
           }

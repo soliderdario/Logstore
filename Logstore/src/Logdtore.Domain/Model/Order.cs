@@ -1,24 +1,25 @@
-﻿using System;
+﻿using Logdtore.Domain.Model;
+using System;
 using System.Collections.Generic;
 
-namespace Logdtore.Domain.Model
+namespace Logstore.Domain.Model
 {
-    public class Order:Base
-    {        
+    public class Order : ModelBase
+    {
         public long CustomerId { get; set; }
         public DateTime Date { get; set; }
-        public List<OrderItem> Items { get; set; }       
+        public List<OrderItem> Items { get; set; }
     }
 
-    public class OrderItem: Base
-    {        
+    public class OrderItem : ModelBase
+    {
         public long OrderId { get; set; }
         public List<OrderItemFlavor> Flavors { get; set; }
     }
-    public class OrderItemFlavor:Base
-    {       
+    public class OrderItemFlavor : ModelBase
+    {
         public long OrderItemId { get; set; }
         public long FlavorId { get; set; }
-        public decimal Value { get; set; }        
+        public decimal Value { get; set; }
     }
 }

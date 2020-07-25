@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using Logdtore.Domain.Model;
+using Logdtore.Domain.View;
 
 namespace Logstore.Bootstrap.AutoMapper
 {
@@ -9,7 +8,7 @@ namespace Logstore.Bootstrap.AutoMapper
     {
         public MenuAutomapper()
         {
-            //CreateMap<ClinicModel, ClinicViewModel>().ReverseMap();
+            CreateMap<Flavor, FlavorView>().ReverseMap();
         }
     }
 }

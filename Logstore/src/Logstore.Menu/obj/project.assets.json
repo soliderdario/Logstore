@@ -1126,23 +1126,13 @@
           "lib/netcoreapp2.1/_._": {}
         }
       },
-      "Logdtore.Domain/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "compile": {
-          "bin/placeholder/Logdtore.Domain.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Logdtore.Domain.dll": {}
-        }
-      },
       "Logstore.Bootstrap/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
           "AutoMapper": "10.0.0",
-          "Logdtore.Domain": "1.0.0",
           "Logstore.Data": "1.0.0",
+          "Logstore.Domain": "1.0.0",
           "Logstore.Infrastructure": "1.0.0",
           "Microsoft.AspNetCore.Mvc.Core": "2.2.5",
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "3.1.6",
@@ -1166,7 +1156,7 @@
         "dependencies": {
           "Dapper": "2.0.35",
           "Dapper.Contrib": "2.0.35",
-          "Logdtore.Domain": "1.0.0",
+          "Logstore.Domain": "1.0.0",
           "Microsoft.Extensions.Configuration.Abstractions": "3.1.6",
           "System.Data.SqlClient": "4.8.1"
         },
@@ -1175,6 +1165,19 @@
         },
         "runtime": {
           "bin/placeholder/Logstore.Data.dll": {}
+        }
+      },
+      "Logstore.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Dapper.Contrib": "2.0.35"
+        },
+        "compile": {
+          "bin/placeholder/Logstore.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Logstore.Domain.dll": {}
         }
       },
       "Logstore.Infrastructure/1.0.0": {
@@ -4040,11 +4043,6 @@
         "version.txt"
       ]
     },
-    "Logdtore.Domain/1.0.0": {
-      "type": "project",
-      "path": "../Logdtore.Domain/Logdtore.Domain.csproj",
-      "msbuildProject": "../Logdtore.Domain/Logdtore.Domain.csproj"
-    },
     "Logstore.Bootstrap/1.0.0": {
       "type": "project",
       "path": "../Logstore.Bootstrap/Logstore.Bootstrap.csproj",
@@ -4054,6 +4052,11 @@
       "type": "project",
       "path": "../Logstore.Data/Logstore.Data.csproj",
       "msbuildProject": "../Logstore.Data/Logstore.Data.csproj"
+    },
+    "Logstore.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Logdtore.Domain/Logstore.Domain.csproj",
+      "msbuildProject": "../Logdtore.Domain/Logstore.Domain.csproj"
     },
     "Logstore.Infrastructure/1.0.0": {
       "type": "project",

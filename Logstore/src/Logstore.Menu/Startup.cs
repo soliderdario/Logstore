@@ -9,6 +9,7 @@ using Logstore.Bootstrap.AutoMapper;
 using Logstore.Bootstrap.Dependency;
 using Logstore.Bootstrap.Setup;
 using Logstore.Bootstrap.Swagger;
+using Logstore.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -26,6 +27,7 @@ namespace Logstore.Menu
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            DbConnection = new SqlConnection(Configuration.GetConnectionString("DefaultConnection"));
         }
 
         public IConfiguration Configuration { get; }
@@ -34,14 +36,14 @@ namespace Logstore.Menu
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
-            this.DbConnection =new SqlConnection(Configuration.GetConnectionString("DefaultConnection"));
+            services.AddControllers();            
 
             // Json Configuration
             services.CustomJson();
 
             //Auto Mapper Configuration 
             services.AddAutoMapper(typeof(MenuAutomapper));
+            services.Configure<RepositoryBase>(this.Configuration);
 
             // Dependency Injection Configuration
             services.MenuResolveDependencies(this.Configuration);

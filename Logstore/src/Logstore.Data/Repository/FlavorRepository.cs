@@ -1,65 +1,59 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Threading.Tasks;
-using Microsoft.Extensions.Configuration;
-using Dapper;
-using Dapper.Contrib.Extensions;
-using Logdtore.Domain;
 using Logdtore.Domain.Model;
-using Logdtore.Domain.Interfaces;
+using Logstore.Domain.Interfaces;
 
 namespace Logstore.Data.Repository
 {
-    public class FlavorRepository : BaseRepository, IFlavorRepository
+    public class FlavorRepository : IFlavorRepository
     {
-        public FlavorRepository(IConfiguration configuration) :base(configuration)
+        private readonly RepositoryBase _context;
+        public FlavorRepository(RepositoryBase baseRepository) 
         {
-           
+            _context = baseRepository;
         }
         public async Task<long> Insert(Flavor flavor)
-        {
-            using var con = new SqlConnection(this.GetConnection());
+        {            
             try
-            {
-                con.Open();
-                return await con.InsertAsync(flavor);
+            {                
+                return await _context.Insert(flavor);  
             }
             catch (Exception ex)
-            {
+            { 
                 throw ex;
             }
             finally
             {
-                con.Close();
+                
             }
         }
 
         public async Task Update(Flavor flavor)
-        {
-            using var con = new SqlConnection(this.GetConnection());
+        {           
             try
             {
-                con.Open();
-                await con.UpdateAsync(flavor);
+                _context.Begin();
+                await _context.Update(flavor);
+                Convert.ToInt32("ooo");
+                _context.Commit();
             }
             catch (Exception ex)
             {
+                _context.Rollback();
                 throw ex;
             }
             finally
             {
-                con.Close();
+                
             }
         }
 
         public async Task Delete(long id)
-        {            
-            using var con = new SqlConnection(this.GetConnection());
+        {  
             try
-            {
-                con.Open();
-                await con.ExecuteAsync("Delete From Flavor Where Id =@id", new { id });
+            {                
+                await _context.Execute("Delete From Flavor Where Id =@id", new { id });
             }
             catch (Exception ex)
             {
@@ -67,13 +61,25 @@ namespace Logstore.Data.Repository
             }
             finally
             {
-                con.Close();
+                
             }
         }
         
-        public new async Task<List<Flavor>> Query<Flavor>(string query, object parameters = null)
+        public async Task<IEnumerable<T>> Query<T>(string query, object parameters = null)
         {
-            return await base.Query<Flavor>(query, parameters);
-        }
+            try
+            {
+                return await _context.Query<T>(query, parameters);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+
+            }
+        }        
+        
     }
 }

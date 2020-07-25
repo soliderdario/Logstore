@@ -1,16 +1,14 @@
-﻿using Logdtore.Domain.Model;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using Logdtore.Domain.Model;
 
-namespace Logdtore.Domain
+namespace Logstore.Domain.Interfaces
 {
     public interface IFlavorRepository
     {
         Task<long> Insert(Flavor flavor);
         Task Update(Flavor flavor);
         Task Delete(long id);
-        Task<List<Flavor>> Query<Flavor>(string query, object parameters = null);
+        Task<IEnumerable<T>> Query<T>(string query, object parameters = null);
     }
 }

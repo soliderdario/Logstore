@@ -1,8 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "2dyueuXk5WOeT5mxFAee8tFMNIVDld6ZZv08Daus/tdnz8/TNpyLT4WghoqyALXvu0z9MJJmCAagQgrbwpLVrA==",
+  "dgSpecHash": "cMQl3MERCev9DDyltIjCELmedkkj9jETCm1L0DrwqHbL9MstKRswtQS829y51IAzMRM6cpFLHkmSajlRYKPavw==",
   "success": true,
-  "projectFilePath": "X:\\GitHub\\Logstore\\Logstore\\src\\Logdtore.Domain\\Logdtore.Domain.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "X:\\GitHub\\Logstore\\Logstore\\src\\Logdtore.Domain\\Logstore.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\solid\\.nuget\\packages\\dapper\\2.0.35\\dapper.2.0.35.nupkg.sha512",
+    "C:\\Users\\solid\\.nuget\\packages\\dapper.contrib\\2.0.35\\dapper.contrib.2.0.35.nupkg.sha512",
+    "C:\\Users\\solid\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\solid\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512",
+    "C:\\Users\\solid\\.nuget\\packages\\system.reflection.emit.lightweight\\4.7.0\\system.reflection.emit.lightweight.4.7.0.nupkg.sha512"
+  ],
   "logs": []
 }

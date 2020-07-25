@@ -10,7 +10,7 @@
         "dependencies": {
           "Dapper": "2.0.35",
           "Dapper.Contrib": "2.0.35",
-          "Logdtore.Domain": "1.0.0",
+          "Logstore.Domain": "1.0.0",
           "Microsoft.Extensions.Configuration.Abstractions": "3.1.6",
           "System.Data.SqlClient": "4.8.1"
         },
@@ -139,9 +139,12 @@
         }
       },
       "System.Security.Principal.Windows/4.7.0": {},
-      "Logdtore.Domain/1.0.0": {
+      "Logstore.Domain/1.0.0": {
+        "dependencies": {
+          "Dapper.Contrib": "2.0.35"
+        },
         "runtime": {
-          "Logdtore.Domain.dll": {}
+          "Logstore.Domain.dll": {}
         }
       }
     }
@@ -264,7 +267,7 @@
       "path": "system.security.principal.windows/4.7.0",
       "hashPath": "system.security.principal.windows.4.7.0.nupkg.sha512"
     },
-    "Logdtore.Domain/1.0.0": {
+    "Logstore.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

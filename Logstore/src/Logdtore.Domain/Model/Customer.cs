@@ -1,7 +1,9 @@
-﻿namespace Logdtore.Domain.Model
+﻿using Logdtore.Domain.Model;
+
+namespace Logstore.Domain.Model
 {
-    public class Customer:Base
-    {        
+    public class Customer : ModelBase
+    {
         public string Name { get; set; }
         public string Email { get; set; }
         public string Street { get; set; }

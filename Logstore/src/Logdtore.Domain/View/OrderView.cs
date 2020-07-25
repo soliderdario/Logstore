@@ -1,4 +1,4 @@
-﻿using Logdtore.Domain.Model;
+﻿using Logstore.Domain.Model;
 using System;
 using System.Collections.Generic;
 using System.Text;

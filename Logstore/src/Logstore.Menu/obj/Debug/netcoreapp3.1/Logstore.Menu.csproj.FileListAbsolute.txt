@@ -30,12 +30,10 @@ X:\GitHub\Logstore\Logstore\src\Logstore.Menu\bin\Debug\netcoreapp3.1\runtimes\w
 X:\GitHub\Logstore\Logstore\src\Logstore.Menu\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
 X:\GitHub\Logstore\Logstore\src\Logstore.Menu\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 X:\GitHub\Logstore\Logstore\src\Logstore.Menu\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
-X:\GitHub\Logstore\Logstore\src\Logstore.Menu\bin\Debug\netcoreapp3.1\Logdtore.Domain.dll
 X:\GitHub\Logstore\Logstore\src\Logstore.Menu\bin\Debug\netcoreapp3.1\Logstore.Bootstrap.dll
 X:\GitHub\Logstore\Logstore\src\Logstore.Menu\bin\Debug\netcoreapp3.1\Logstore.Data.dll
 X:\GitHub\Logstore\Logstore\src\Logstore.Menu\bin\Debug\netcoreapp3.1\Logstore.Infrastructure.dll
 X:\GitHub\Logstore\Logstore\src\Logstore.Menu\bin\Debug\netcoreapp3.1\Logstore.Bootstrap.pdb
-X:\GitHub\Logstore\Logstore\src\Logstore.Menu\bin\Debug\netcoreapp3.1\Logdtore.Domain.pdb
 X:\GitHub\Logstore\Logstore\src\Logstore.Menu\bin\Debug\netcoreapp3.1\Logstore.Data.pdb
 X:\GitHub\Logstore\Logstore\src\Logstore.Menu\bin\Debug\netcoreapp3.1\Logstore.Infrastructure.pdb
 X:\GitHub\Logstore\Logstore\src\Logstore.Menu\obj\Debug\netcoreapp3.1\Logstore.Menu.csprojAssemblyReference.cache
@@ -50,5 +48,7 @@ X:\GitHub\Logstore\Logstore\src\Logstore.Menu\obj\Debug\netcoreapp3.1\Logstore.M
 X:\GitHub\Logstore\Logstore\src\Logstore.Menu\obj\Debug\netcoreapp3.1\Logstore.Menu.genruntimeconfig.cache
 X:\GitHub\Logstore\Logstore\src\Logstore.Menu\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 X:\GitHub\Logstore\Logstore\src\Logstore.Menu\obj\Debug\netcoreapp3.1\Logstore.Menu.csproj.CoreCompileInputs.cache
-X:\GitHub\Logstore\Logstore\src\Logstore.Menu\obj\Debug\netcoreapp3.1\Logstore.Menu.MvcApplicationPartsAssemblyInfo.cs
 X:\GitHub\Logstore\Logstore\src\Logstore.Menu\obj\Debug\netcoreapp3.1\Logstore.Menu.MvcApplicationPartsAssemblyInfo.cache
+X:\GitHub\Logstore\Logstore\src\Logstore.Menu\obj\Debug\netcoreapp3.1\Logstore.Menu.MvcApplicationPartsAssemblyInfo.cs
+X:\GitHub\Logstore\Logstore\src\Logstore.Menu\bin\Debug\netcoreapp3.1\Logstore.Domain.dll
+X:\GitHub\Logstore\Logstore\src\Logstore.Menu\bin\Debug\netcoreapp3.1\Logstore.Domain.pdb

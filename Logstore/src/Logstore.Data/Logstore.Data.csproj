@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Logdtore.Domain\Logdtore.Domain.csproj" />
+    <ProjectReference Include="..\Logdtore.Domain\Logstore.Domain.csproj" />
   </ItemGroup>
 
 </Project>

@@ -205,14 +205,17 @@
           }
         }
       },
-      "Logdtore.Domain/1.0.0": {
+      "Logstore.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Dapper.Contrib": "2.0.35"
+        },
         "compile": {
-          "bin/placeholder/Logdtore.Domain.dll": {}
+          "bin/placeholder/Logstore.Domain.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Logdtore.Domain.dll": {}
+          "bin/placeholder/Logstore.Domain.dll": {}
         }
       }
     }
@@ -774,17 +777,17 @@
         "version.txt"
       ]
     },
-    "Logdtore.Domain/1.0.0": {
+    "Logstore.Domain/1.0.0": {
       "type": "project",
-      "path": "../Logdtore.Domain/Logdtore.Domain.csproj",
-      "msbuildProject": "../Logdtore.Domain/Logdtore.Domain.csproj"
+      "path": "../Logdtore.Domain/Logstore.Domain.csproj",
+      "msbuildProject": "../Logdtore.Domain/Logstore.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "Dapper >= 2.0.35",
       "Dapper.Contrib >= 2.0.35",
-      "Logdtore.Domain >= 1.0.0",
+      "Logstore.Domain >= 1.0.0",
       "Microsoft.Extensions.Configuration.Abstractions >= 3.1.6",
       "System.Data.SqlClient >= 4.8.1"
     ]
@@ -815,8 +818,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "X:\\GitHub\\Logstore\\Logstore\\src\\Logdtore.Domain\\Logdtore.Domain.csproj": {
-              "projectPath": "X:\\GitHub\\Logstore\\Logstore\\src\\Logdtore.Domain\\Logdtore.Domain.csproj"
+            "X:\\GitHub\\Logstore\\Logstore\\src\\Logdtore.Domain\\Logstore.Domain.csproj": {
+              "projectPath": "X:\\GitHub\\Logstore\\Logstore\\src\\Logdtore.Domain\\Logstore.Domain.csproj"
             }
           }
         }
