@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "gz69AaMRnu1Ff/Ia3w7wPgD385i514JyJFY8lbJ679Y/lpO8x6MJTlBZgHjszYGgoTsAPKxitQgA20d8TBXoAg==",
+  "dgSpecHash": "4pkBaoL3cjt4iizHPkVLVzN2IBCz+X/hXIQgJlPgj0YrISiNtpQACY6oVdGqfjXLBhEBqpL6cHFVhK7e8i2BAw==",
   "success": true,
   "projectFilePath": "X:\\GitHub\\Logstore\\Logstore\\src\\Logstore.Menu\\Logstore.Menu.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\solid\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.0.1\\automapper.extensions.microsoft.dependencyinjection.8.0.1.nupkg.sha512",
     "C:\\Users\\solid\\.nuget\\packages\\dapper\\2.0.35\\dapper.2.0.35.nupkg.sha512",
     "C:\\Users\\solid\\.nuget\\packages\\dapper.contrib\\2.0.35\\dapper.contrib.2.0.35.nupkg.sha512",
+    "C:\\Users\\solid\\.nuget\\packages\\fluentvalidation\\9.0.1\\fluentvalidation.9.0.1.nupkg.sha512",
     "C:\\Users\\solid\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\solid\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",
     "C:\\Users\\solid\\.nuget\\packages\\microsoft.aspnetcore.authorization\\2.2.0\\microsoft.aspnetcore.authorization.2.2.0.nupkg.sha512",

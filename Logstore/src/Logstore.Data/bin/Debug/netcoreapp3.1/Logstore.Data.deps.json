@@ -42,6 +42,14 @@
           }
         }
       },
+      "FluentValidation/9.0.1": {
+        "runtime": {
+          "lib/netstandard2.0/FluentValidation.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.1.0"
+          }
+        }
+      },
       "Microsoft.CSharp/4.7.0": {},
       "Microsoft.Extensions.Configuration.Abstractions/3.1.6": {
         "dependencies": {
@@ -141,10 +149,17 @@
       "System.Security.Principal.Windows/4.7.0": {},
       "Logstore.Domain/1.0.0": {
         "dependencies": {
-          "Dapper.Contrib": "2.0.35"
+          "Dapper.Contrib": "2.0.35",
+          "FluentValidation": "9.0.1",
+          "Logstore.Infrastructure": "1.0.0"
         },
         "runtime": {
           "Logstore.Domain.dll": {}
+        }
+      },
+      "Logstore.Infrastructure/1.0.0": {
+        "runtime": {
+          "Logstore.Infrastructure.dll": {}
         }
       }
     }
@@ -168,6 +183,13 @@
       "sha512": "sha512-yVrsIV1OkdUZ8BGQbrO0EkthnPWtgs6TV2pfOtTC93G8y2BwZ0nnBJifJj+ICzN7c7COsBlVg6P6eYUwdwJj1Q==",
       "path": "dapper.contrib/2.0.35",
       "hashPath": "dapper.contrib.2.0.35.nupkg.sha512"
+    },
+    "FluentValidation/9.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GeF+cPknUFFJ5FkCybmQShaXWwJowBuJozgns6In37wiP2zOWx+kdNPBAN9BlDyhcORdxtXeGnkLZ+OFT85onQ==",
+      "path": "fluentvalidation/9.0.1",
+      "hashPath": "fluentvalidation.9.0.1.nupkg.sha512"
     },
     "Microsoft.CSharp/4.7.0": {
       "type": "package",
@@ -268,6 +290,11 @@
       "hashPath": "system.security.principal.windows.4.7.0.nupkg.sha512"
     },
     "Logstore.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Logstore.Infrastructure/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

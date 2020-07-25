@@ -26,7 +26,11 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "projectReferences": {}
+            "projectReferences": {
+              "X:\\GitHub\\Logstore\\Logstore\\src\\Logstore.Infrastructure\\Logstore.Infrastructure.csproj": {
+                "projectPath": "X:\\GitHub\\Logstore\\Logstore\\src\\Logstore.Infrastructure\\Logstore.Infrastructure.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -41,6 +45,10 @@
             "Dapper.Contrib": {
               "target": "Package",
               "version": "[2.0.35, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[9.0.1, )"
             }
           },
           "imports": [

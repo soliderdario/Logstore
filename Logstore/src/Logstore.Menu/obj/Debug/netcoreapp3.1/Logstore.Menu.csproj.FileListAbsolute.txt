@@ -52,3 +52,4 @@ X:\GitHub\Logstore\Logstore\src\Logstore.Menu\obj\Debug\netcoreapp3.1\Logstore.M
 X:\GitHub\Logstore\Logstore\src\Logstore.Menu\obj\Debug\netcoreapp3.1\Logstore.Menu.MvcApplicationPartsAssemblyInfo.cs
 X:\GitHub\Logstore\Logstore\src\Logstore.Menu\bin\Debug\netcoreapp3.1\Logstore.Domain.dll
 X:\GitHub\Logstore\Logstore\src\Logstore.Menu\bin\Debug\netcoreapp3.1\Logstore.Domain.pdb
+X:\GitHub\Logstore\Logstore\src\Logstore.Menu\bin\Debug\netcoreapp3.1\FluentValidation.dll

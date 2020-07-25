@@ -28,6 +28,15 @@
           "lib/netstandard2.0/Dapper.Contrib.dll": {}
         }
       },
+      "FluentValidation/9.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/FluentValidation.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentValidation.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.7.0": {
         "type": "package",
         "compile": {
@@ -209,13 +218,25 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
-          "Dapper.Contrib": "2.0.35"
+          "Dapper.Contrib": "2.0.35",
+          "FluentValidation": "9.0.1",
+          "Logstore.Infrastructure": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Logstore.Domain.dll": {}
         },
         "runtime": {
           "bin/placeholder/Logstore.Domain.dll": {}
+        }
+      },
+      "Logstore.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Logstore.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Logstore.Infrastructure.dll": {}
         }
       }
     }
@@ -249,6 +270,21 @@
         "lib/net461/Dapper.Contrib.xml",
         "lib/netstandard2.0/Dapper.Contrib.dll",
         "lib/netstandard2.0/Dapper.Contrib.xml"
+      ]
+    },
+    "FluentValidation/9.0.1": {
+      "sha512": "GeF+cPknUFFJ5FkCybmQShaXWwJowBuJozgns6In37wiP2zOWx+kdNPBAN9BlDyhcORdxtXeGnkLZ+OFT85onQ==",
+      "type": "package",
+      "path": "fluentvalidation/9.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluentvalidation.9.0.1.nupkg.sha512",
+        "fluentvalidation.nuspec",
+        "lib/net461/FluentValidation.dll",
+        "lib/net461/FluentValidation.xml",
+        "lib/netstandard2.0/FluentValidation.dll",
+        "lib/netstandard2.0/FluentValidation.xml"
       ]
     },
     "Microsoft.CSharp/4.7.0": {
@@ -781,6 +817,11 @@
       "type": "project",
       "path": "../Logdtore.Domain/Logstore.Domain.csproj",
       "msbuildProject": "../Logdtore.Domain/Logstore.Domain.csproj"
+    },
+    "Logstore.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../Logstore.Infrastructure/Logstore.Infrastructure.csproj",
+      "msbuildProject": "../Logstore.Infrastructure/Logstore.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {

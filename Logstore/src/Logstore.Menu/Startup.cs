@@ -1,24 +1,17 @@
-using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Threading.Tasks;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc.ApiExplorer;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using AutoMapper;
 using Logstore.Bootstrap.AutoMapper;
 using Logstore.Bootstrap.Dependency;
 using Logstore.Bootstrap.Setup;
 using Logstore.Bootstrap.Swagger;
 using Logstore.Data;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.ApiExplorer;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 
 namespace Logstore.Menu
 {
@@ -43,6 +36,8 @@ namespace Logstore.Menu
 
             //Auto Mapper Configuration 
             services.AddAutoMapper(typeof(MenuAutomapper));
+            
+            //Repository Configuration
             services.Configure<RepositoryBase>(this.Configuration);
 
             // Dependency Injection Configuration

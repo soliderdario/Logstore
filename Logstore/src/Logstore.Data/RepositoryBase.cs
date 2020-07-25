@@ -41,18 +41,18 @@ namespace Logstore.Data
             return _dbConnection.ExecuteAsync(query, parameters, _dbTransaction);
         }
 
-        public async Task<T> ExecuteProcedureScalar<T>(string name, object parameters)
+        public async Task<T> ExecuteProcedure<T>(string name, object parameters)
         {
             var result = _dbConnection.ExecuteScalarAsync<T>(name, parameters, _dbTransaction, commandType: CommandType.StoredProcedure, commandTimeout: _timeOut);
             return await result;
         }
 
-        public async Task<T> ExecuteScalarAsync<T>(string name, object parameters)
+        public async Task<T> ExecuteScalar<T>(string name, object parameters)
         {
             return await _dbConnection.ExecuteScalarAsync<T>(name, parameters, _dbTransaction);           
         }
 
-        public async Task ExecuteProcedureAsync(string name, object parameters)
+        public async Task ExecuteProcedure(string name, object parameters)
         {
             await _dbConnection.ExecuteAsync(name, parameters, commandType: CommandType.StoredProcedure, commandTimeout: _timeOut);
         }

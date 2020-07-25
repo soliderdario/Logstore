@@ -10,3 +10,5 @@ X:\GitHub\Logstore\Logstore\src\Logstore.Data\obj\Debug\netcoreapp3.1\Logstore.D
 X:\GitHub\Logstore\Logstore\src\Logstore.Data\obj\Debug\netcoreapp3.1\Logstore.Data.pdb
 X:\GitHub\Logstore\Logstore\src\Logstore.Data\bin\Debug\netcoreapp3.1\Logstore.Domain.dll
 X:\GitHub\Logstore\Logstore\src\Logstore.Data\bin\Debug\netcoreapp3.1\Logstore.Domain.pdb
+X:\GitHub\Logstore\Logstore\src\Logstore.Data\bin\Debug\netcoreapp3.1\Logstore.Infrastructure.dll
+X:\GitHub\Logstore\Logstore\src\Logstore.Data\bin\Debug\netcoreapp3.1\Logstore.Infrastructure.pdb

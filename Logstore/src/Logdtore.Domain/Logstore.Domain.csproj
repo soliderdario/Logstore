@@ -10,6 +10,11 @@
 
   <ItemGroup>
     <PackageReference Include="Dapper.Contrib" Version="2.0.35" />
+    <PackageReference Include="FluentValidation" Version="9.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Logstore.Infrastructure\Logstore.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
