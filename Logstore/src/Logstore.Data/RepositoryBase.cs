@@ -20,7 +20,7 @@ namespace Logstore.Data
         {
             _configuration = configuration;
             if (_dbConnection == null)
-            {
+            {                
                 _dbConnection = new SqlConnection(_configuration.GetConnectionString("DefaultConnection"));
             }
 

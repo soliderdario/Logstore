@@ -1,0 +1,444 @@
+{
+  "format": 1,
+  "restore": {
+    "X:\\GitHub\\Logstore\\Logstore\\src\\Logstore.Test\\Logstore.Test.csproj": {}
+  },
+  "projects": {
+    "X:\\GitHub\\Logstore\\Logstore\\src\\Logdtore.Domain\\Logstore.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "X:\\GitHub\\Logstore\\Logstore\\src\\Logdtore.Domain\\Logstore.Domain.csproj",
+        "projectName": "Logstore.Domain",
+        "projectPath": "X:\\GitHub\\Logstore\\Logstore\\src\\Logdtore.Domain\\Logstore.Domain.csproj",
+        "packagesPath": "C:\\Users\\solid\\.nuget\\packages\\",
+        "outputPath": "X:\\GitHub\\Logstore\\Logstore\\src\\Logdtore.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\solid\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "X:\\GitHub\\Logstore\\Logstore\\src\\Logstore.Infrastructure\\Logstore.Infrastructure.csproj": {
+                "projectPath": "X:\\GitHub\\Logstore\\Logstore\\src\\Logstore.Infrastructure\\Logstore.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Dapper.Contrib": {
+              "target": "Package",
+              "version": "[2.0.35, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[9.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "X:\\GitHub\\Logstore\\Logstore\\src\\Logstore.Bootstrap\\Logstore.Bootstrap.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "X:\\GitHub\\Logstore\\Logstore\\src\\Logstore.Bootstrap\\Logstore.Bootstrap.csproj",
+        "projectName": "Logstore.Bootstrap",
+        "projectPath": "X:\\GitHub\\Logstore\\Logstore\\src\\Logstore.Bootstrap\\Logstore.Bootstrap.csproj",
+        "packagesPath": "C:\\Users\\solid\\.nuget\\packages\\",
+        "outputPath": "X:\\GitHub\\Logstore\\Logstore\\src\\Logstore.Bootstrap\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\solid\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "X:\\GitHub\\Logstore\\Logstore\\src\\Logdtore.Domain\\Logstore.Domain.csproj": {
+                "projectPath": "X:\\GitHub\\Logstore\\Logstore\\src\\Logdtore.Domain\\Logstore.Domain.csproj"
+              },
+              "X:\\GitHub\\Logstore\\Logstore\\src\\Logstore.Data\\Logstore.Data.csproj": {
+                "projectPath": "X:\\GitHub\\Logstore\\Logstore\\src\\Logstore.Data\\Logstore.Data.csproj"
+              },
+              "X:\\GitHub\\Logstore\\Logstore\\src\\Logstore.Infrastructure\\Logstore.Infrastructure.csproj": {
+                "projectPath": "X:\\GitHub\\Logstore\\Logstore\\src\\Logstore.Infrastructure\\Logstore.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer": {
+              "target": "Package",
+              "version": "[4.1.1, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerGen": {
+              "target": "Package",
+              "version": "[5.5.1, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerUi": {
+              "target": "Package",
+              "version": "[5.5.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "X:\\GitHub\\Logstore\\Logstore\\src\\Logstore.Data\\Logstore.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "X:\\GitHub\\Logstore\\Logstore\\src\\Logstore.Data\\Logstore.Data.csproj",
+        "projectName": "Logstore.Data",
+        "projectPath": "X:\\GitHub\\Logstore\\Logstore\\src\\Logstore.Data\\Logstore.Data.csproj",
+        "packagesPath": "C:\\Users\\solid\\.nuget\\packages\\",
+        "outputPath": "X:\\GitHub\\Logstore\\Logstore\\src\\Logstore.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\solid\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "X:\\GitHub\\Logstore\\Logstore\\src\\Logdtore.Domain\\Logstore.Domain.csproj": {
+                "projectPath": "X:\\GitHub\\Logstore\\Logstore\\src\\Logdtore.Domain\\Logstore.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.35, )"
+            },
+            "Dapper.Contrib": {
+              "target": "Package",
+              "version": "[2.0.35, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "X:\\GitHub\\Logstore\\Logstore\\src\\Logstore.Infrastructure\\Logstore.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "X:\\GitHub\\Logstore\\Logstore\\src\\Logstore.Infrastructure\\Logstore.Infrastructure.csproj",
+        "projectName": "Logstore.Infrastructure",
+        "projectPath": "X:\\GitHub\\Logstore\\Logstore\\src\\Logstore.Infrastructure\\Logstore.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\solid\\.nuget\\packages\\",
+        "outputPath": "X:\\GitHub\\Logstore\\Logstore\\src\\Logstore.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\solid\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "X:\\GitHub\\Logstore\\Logstore\\src\\Logstore.Sale\\Logstore.Sale.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "X:\\GitHub\\Logstore\\Logstore\\src\\Logstore.Sale\\Logstore.Sale.csproj",
+        "projectName": "Logstore.Sale",
+        "projectPath": "X:\\GitHub\\Logstore\\Logstore\\src\\Logstore.Sale\\Logstore.Sale.csproj",
+        "packagesPath": "C:\\Users\\solid\\.nuget\\packages\\",
+        "outputPath": "X:\\GitHub\\Logstore\\Logstore\\src\\Logstore.Sale\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\solid\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "X:\\GitHub\\Logstore\\Logstore\\src\\Logstore.Bootstrap\\Logstore.Bootstrap.csproj": {
+                "projectPath": "X:\\GitHub\\Logstore\\Logstore\\src\\Logstore.Bootstrap\\Logstore.Bootstrap.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "X:\\GitHub\\Logstore\\Logstore\\src\\Logstore.Test\\Logstore.Test.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "X:\\GitHub\\Logstore\\Logstore\\src\\Logstore.Test\\Logstore.Test.csproj",
+        "projectName": "Logstore.Test",
+        "projectPath": "X:\\GitHub\\Logstore\\Logstore\\src\\Logstore.Test\\Logstore.Test.csproj",
+        "packagesPath": "C:\\Users\\solid\\.nuget\\packages\\",
+        "outputPath": "X:\\GitHub\\Logstore\\Logstore\\src\\Logstore.Test\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\solid\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "X:\\GitHub\\Logstore\\Logstore\\src\\Logdtore.Domain\\Logstore.Domain.csproj": {
+                "projectPath": "X:\\GitHub\\Logstore\\Logstore\\src\\Logdtore.Domain\\Logstore.Domain.csproj"
+              },
+              "X:\\GitHub\\Logstore\\Logstore\\src\\Logstore.Sale\\Logstore.Sale.csproj": {
+                "projectPath": "X:\\GitHub\\Logstore\\Logstore\\src\\Logstore.Sale\\Logstore.Sale.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "MSTest.TestAdapter": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "Microsoft.AspNetCore.TestHost": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.5.0, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

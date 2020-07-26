@@ -31,7 +31,7 @@ namespace Logstore.Sale
             services.CustomJson();
 
             //Auto Mapper Configuration 
-            services.AddAutoMapper(typeof(SaleAutomapper));
+            services.AddAutoMapper(typeof(SaleAutomapper));            
 
             //Repository Configuration
             services.Configure<RepositoryBase>(this.Configuration);
