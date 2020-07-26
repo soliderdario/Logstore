@@ -26,12 +26,27 @@ namespace Logstore.Person.Controllers.V1
             _customerRepository = customerRepository;
         }
 
-        [HttpGet("Query")]
+        [HttpGet("query")]
         public async Task<IEnumerable<CustomerView>> Query()
         {
             try
             {
                 var result = _mapper.Map<IEnumerable<CustomerView>>(await _customerRepository.Query<CustomerView>("Select * from Customer order by Name"));
+                return result;
+            }
+            catch (Exception ex)
+            {
+                NotifyError(ex.Message);
+                return (IEnumerable<CustomerView>)BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet("query/email/{email}")]
+        public async Task<IEnumerable<CustomerView>> Query(string email)
+        {
+            try
+            {
+                var result = _mapper.Map<IEnumerable<CustomerView>>(await _customerRepository.Query<CustomerView>("Select * from Customer Where email = @email", new { email }));
                 return result;
             }
             catch (Exception ex)

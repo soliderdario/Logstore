@@ -26,7 +26,7 @@ namespace Logstore.Menu.Controllers.V1
             _flavorRepository = flavorRepository;
         }
 
-        [HttpGet("Query")]
+        [HttpGet("query")]
         public async Task<IEnumerable<FlavorView>> Query()
         {
             try

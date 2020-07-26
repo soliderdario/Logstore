@@ -25,7 +25,7 @@ namespace Logstore.Data.Repository
 
         private async Task Validation(Flavor flavor)
         {
-            if (!_baseService.ExecuteValidation(new FlavorValidation(), flavor)) return;
+            if (!_baseService.ModelValidation(new FlavorValidation(), flavor)) return;
             var search = await _context.ExecuteScalar<int>("Select Count(*) from Flavor where Name =@name and Id <> @id", new { name =flavor.Name, id =flavor.Id });
             if (search>0)
             {

@@ -19,6 +19,7 @@ namespace Logstore.Bootstrap.Dependency
             services.AddScoped<INotifier, Notifier>();
             services.AddScoped<ICustomerRepository, CustomerRepository>();
             services.AddScoped<IOrderRepository, OrderRepository>();
+            services.AddScoped<IFlavorRepository, FlavorRepository>();
             return services;
         }
     }

@@ -25,7 +25,7 @@ namespace Logstore.Data.Repository
 
         private async Task Validation(Customer customer)
         {
-            if (!_baseService.ExecuteValidation(new CustomerValidation(), customer)) return;
+            if (!_baseService.ModelValidation(new CustomerValidation(), customer)) return;
             var search = await _context.ExecuteScalar<int>("Select Count(*) from Customer where Email =@email and Id <> @id", new { email = customer.Email, id = customer.Id });
             if (search > 0)
             {

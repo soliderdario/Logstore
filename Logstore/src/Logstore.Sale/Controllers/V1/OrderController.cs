@@ -6,8 +6,8 @@ using AutoMapper;
 using Logstore.Bootstrap;
 using Logstore.Domain.Interfaces;
 using Logstore.Infrastructure.Notifiers;
-using Logstore.Domain.View;
 using Logstore.Domain.Model;
+using Logdtore.Domain.View;
 
 namespace Logstore.Sale.Controllers.V1
 {
@@ -15,49 +15,41 @@ namespace Logstore.Sale.Controllers.V1
     [Route("api/v{version:apiVersion}/[controller]")]
     public class OrderController : MainController
     {
-
-        private readonly ICustomerRepository _customerRepository;
+        private readonly IOrderRepository _orderRepository;        
         public OrderController(
             INotifier notifier,
             IMapper mapper,
-            ICustomerRepository customerRepository
+            IOrderRepository orderRepository           
             ) : base(notifier, mapper)
         {
-            _customerRepository = customerRepository;
+            _orderRepository = orderRepository;
         }
 
-        [HttpGet("Query")]
-        public async Task<IEnumerable<CustomerView>> Query()
+        [HttpGet("query")]
+        public async Task<IEnumerable<OrderView>> Query()
         {
             try
             {
-                var result = _mapper.Map<IEnumerable<CustomerView>>(await _customerRepository.Query<CustomerView>("Select * from Customer order by Name"));
+                var result = _mapper.Map<IEnumerable<OrderView>>(await _orderRepository.Query<OrderView>("Select * from Order"));
                 return result;
             }
             catch (Exception ex)
             {
                 NotifyError(ex.Message);
-                return (IEnumerable<CustomerView>)BadRequest(ex.Message);
+                return (IEnumerable<OrderView>)BadRequest(ex.Message);
             }
         }
 
         [HttpPost("save")]
-        public async Task<IActionResult> Save([FromBody] CustomerView customerView)
+        public async Task<IActionResult> Save([FromBody] OrderView orderView)
         {
             try
             {
                 if (!ModelState.IsValid)
                     return CustomResponse(ModelState);
 
-                var customer = _mapper.Map<Customer>(customerView);
-                if (customer.Id == 0)
-                {
-                    await _customerRepository.Insert(customer);
-                }
-                else
-                {
-                    await _customerRepository.Update(customer);
-                }
+                var customer = _mapper.Map<Customer>(orderView);
+                await _orderRepository.Save(orderView, customer);
             }
             catch (Exception ex)
             {
@@ -66,18 +58,18 @@ namespace Logstore.Sale.Controllers.V1
             return CustomResponse();
         }
 
-        [HttpDelete("delete/{customerId}")]
-        public async Task<IActionResult> Delete(long customerId)
+        [HttpDelete("delete/{orderId}")]
+        public async Task<IActionResult> Delete(long orderId)
         {
             try
             {
-                await _customerRepository.Delete(customerId);
+                await _orderRepository.Delete(orderId);
             }
             catch (Exception ex)
             {
                 NotifyError(ex.Message);
             }
-            return CustomResponse(customerId);
+            return CustomResponse(orderId);
         }
     }
 }

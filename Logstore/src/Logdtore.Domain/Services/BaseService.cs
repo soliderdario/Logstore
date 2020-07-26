@@ -1,6 +1,7 @@
 ﻿using FluentValidation;
 using FluentValidation.Results;
 using Logdtore.Domain.Model;
+using Logstore.Domain.View;
 using Logstore.Infrastructure.Notifiers;
 
 namespace Logstore.Domain.Services
@@ -27,7 +28,18 @@ namespace Logstore.Domain.Services
             _notifier.SetNotification(new Notification(mensagem));
         }
 
-        public bool ExecuteValidation<TV, TE>(TV validation, TE entidade) where TV : AbstractValidator<TE> where TE : ModelBase
+        public bool ModelValidation<TV, TE>(TV validation, TE entidade) where TV : AbstractValidator<TE> where TE : ModelBase
+        {
+            var validator = validation.Validate(entidade);
+
+            if (validator.IsValid) return true;
+
+            Notify(validator);
+
+            return false;
+        }
+
+        public bool ViewValidation<TV, TE>(TV validation, TE entidade) where TV : AbstractValidator<TE> where TE : ViewBase
         {
             var validator = validation.Validate(entidade);
 

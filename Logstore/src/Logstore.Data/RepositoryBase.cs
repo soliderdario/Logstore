@@ -32,20 +32,14 @@ namespace Logstore.Data
 
         public async Task<IEnumerable<T>> Query<T>(string query, object parameters = null)
         {                
-            var result = await _dbConnection.QueryAsync<T>(query, parameters);
+            var result = await _dbConnection.QueryAsync<T>(query, parameters, _dbTransaction);
             return (IEnumerable<T>)result;
         }
 
         public Task<int> Execute(string query, object parameters = null)
         {
             return _dbConnection.ExecuteAsync(query, parameters, _dbTransaction);
-        }
-
-        public async Task<T> ExecuteProcedure<T>(string name, object parameters)
-        {
-            var result = _dbConnection.ExecuteScalarAsync<T>(name, parameters, _dbTransaction, commandType: CommandType.StoredProcedure, commandTimeout: _timeOut);
-            return await result;
-        }
+        }        
 
         public async Task<T> ExecuteScalar<T>(string name, object parameters)
         {
@@ -54,7 +48,7 @@ namespace Logstore.Data
 
         public async Task ExecuteProcedure(string name, object parameters)
         {
-            await _dbConnection.ExecuteAsync(name, parameters, commandType: CommandType.StoredProcedure, commandTimeout: _timeOut);
+            await _dbConnection.ExecuteAsync(name, parameters, _dbTransaction, _timeOut, CommandType.StoredProcedure);
         }
 
         public async Task<int> Insert<T>(T entity) where T : ModelBase

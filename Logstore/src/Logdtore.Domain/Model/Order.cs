@@ -5,11 +5,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Logstore.Domain.Model
 {
-    [Table("Order")]
+    [Table("[Order]")]
     public class Order : ModelBase
     {
         public long CustomerId { get; set; }
-        public DateTime Date { get; set; }
+        public DateTime DateCreate { get; set; }
+
+        [Dapper.Contrib.Extensions.Write(false)]
         public List<OrderItem> Items { get; set; }
     }
 
@@ -17,6 +19,8 @@ namespace Logstore.Domain.Model
     public class OrderItem : ModelBase
     {
         public long OrderId { get; set; }
+
+        [Dapper.Contrib.Extensions.Write(false)]
         public List<OrderItemFlavor> Flavors { get; set; }
     }
     [Table("OrderItemFlavor")]
@@ -24,6 +28,6 @@ namespace Logstore.Domain.Model
     {
         public long OrderItemId { get; set; }
         public long FlavorId { get; set; }
-        public decimal Value { get; set; }
+        public double Value { get; set; }
     }
 }

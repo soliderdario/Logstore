@@ -3,9 +3,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Logstore.Domain.View
 {
-    public class CustomerView
-    {
-        public long Id { get; set; }
+    public class CustomerView: ViewBase
+    {        
 
         [Required(ErrorMessage = "Campo {0} obrigatório")]
         [StringLength(100, ErrorMessage = "O campo {0} precisa ter entre {2} e {1} caracteres", MinimumLength = 1)]
