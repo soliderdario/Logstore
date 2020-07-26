@@ -1,4 +1,4 @@
-﻿using Logstore.Domain.Model;
+﻿using Logstore.Domain.Interfaces;
 using Logstore.Domain.View;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Logdtore.Domain.View
 {
-    public class OrderView: ViewBase
+    public class OrderView: IValidation
     {        
 
         [Required(ErrorMessage = "Campo {0} obrigatório")]
@@ -42,12 +42,16 @@ namespace Logdtore.Domain.View
         [Required(ErrorMessage = "Campo {0} obrigatório")]
         [StringLength(9, ErrorMessage = "O campo {0} precisa ter entre {2} e {1} caracteres", MinimumLength = 9)]
         public string PostalCode { get; set; }
-        
+
+        [Required(ErrorMessage = "Campo {0} obrigatório")]
+        [StringLength(2, ErrorMessage = "O campo {0} precisa ter entre {2} e {1} caracteres", MinimumLength = 2)]
+        public string UF { get; set; }
+
         [Required(ErrorMessage = "Campo {0} obrigatório")]
         public List<OrderItemView> Items { get; set; }
     }
 
-    public class OrderItemView : ViewBase
+    public class OrderItemView : IValidation
     {
         public List<long> Flavors { get; set; }
     }

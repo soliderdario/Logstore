@@ -52,3 +52,4 @@ X:\GitHub\Logstore\Logstore\src\Logstore.Person\obj\Debug\netcoreapp3.1\Logstore
 X:\GitHub\Logstore\Logstore\src\Logstore.Person\obj\Debug\netcoreapp3.1\staticwebassets\Logstore.Person.StaticWebAssets.Manifest.cache
 X:\GitHub\Logstore\Logstore\src\Logstore.Person\obj\Debug\netcoreapp3.1\staticwebassets\Logstore.Person.StaticWebAssets.xml
 X:\GitHub\Logstore\Logstore\src\Logstore.Person\obj\Debug\netcoreapp3.1\Logstore.Person.genruntimeconfig.cache
+X:\GitHub\Logstore\Logstore\src\Logstore.Person\obj\Debug\netcoreapp3.1\Logstore.Person.MvcApplicationPartsAssemblyInfo.cs

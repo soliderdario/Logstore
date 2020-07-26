@@ -1,5 +1,4 @@
-﻿using Logdtore.Domain.Model;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Logstore.Domain.View
 {
