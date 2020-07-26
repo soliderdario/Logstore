@@ -1061,6 +1061,7 @@
       },
       "Logstore.Data/1.0.0": {
         "dependencies": {
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.0.1",
           "Dapper": "2.0.35",
           "Dapper.Contrib": "2.0.35",
           "Logstore.Domain": "1.0.0",

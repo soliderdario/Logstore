@@ -6,7 +6,6 @@ using AutoMapper;
 using Logstore.Bootstrap;
 using Logstore.Domain.Interfaces;
 using Logstore.Infrastructure.Notifiers;
-using Logstore.Domain.Model;
 using Logdtore.Domain.View;
 
 namespace Logstore.Sale.Controllers.V1
@@ -26,30 +25,46 @@ namespace Logstore.Sale.Controllers.V1
         }
 
         [HttpGet("query")]
-        public async Task<IEnumerable<OrderView>> Query()
+        public async Task<IEnumerable<OrderNoCustomerView>> Query()
         {
             try
             {
-                var result = _mapper.Map<IEnumerable<OrderView>>(await _orderRepository.Query<OrderView>("Select * from Order"));
+                var result = _mapper.Map<IEnumerable<OrderNoCustomerView>>(await _orderRepository.Query<OrderNoCustomerView>("Select * from Order"));
                 return result;
             }
             catch (Exception ex)
             {
                 NotifyError(ex.Message);
-                return (IEnumerable<OrderView>)BadRequest(ex.Message);
+                return (IEnumerable<OrderNoCustomerView>)BadRequest(ex.Message);
             }
         }
 
-        [HttpPost("save")]
-        public async Task<IActionResult> Save([FromBody] OrderView orderView)
+        [HttpPost("new/no/customer")]
+        public async Task<IActionResult> NewOrderNoCustomer([FromBody] OrderNoCustomerView orderView)
+        {
+            try
+            {
+                if (!ModelState.IsValid)
+                    return CustomResponse(ModelState);
+                
+                await _orderRepository.Save(orderView);
+            }
+            catch (Exception ex)
+            {
+                NotifyError(ex.Message);
+            }
+            return CustomResponse();
+        }
+
+        [HttpPost("new/yes/customer")]
+        public async Task<IActionResult> NewOrderYesCustomer([FromBody] OrderYesCustomerView orderView)
         {
             try
             {
                 if (!ModelState.IsValid)
                     return CustomResponse(ModelState);
 
-                var customer = _mapper.Map<Customer>(orderView);
-                await _orderRepository.Save(orderView, customer);
+                await _orderRepository.Save(orderView);
             }
             catch (Exception ex)
             {

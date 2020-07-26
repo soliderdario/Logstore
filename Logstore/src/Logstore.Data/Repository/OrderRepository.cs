@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Logdtore.Domain.Model;
 using Logdtore.Domain.View;
 using Logstore.Domain.Interfaces;
@@ -19,30 +20,69 @@ namespace Logstore.Data.Repository
         private readonly BaseService _baseService;
         private readonly ICustomerRepository _customerRepository;
         private readonly IFlavorRepository _flavorRepository;
+        private readonly IMapper _mapper;
         private readonly List<Flavor> _flavors = new List<Flavor>();
+        private Customer _customer = null;
+
         public OrderRepository(
             ICustomerRepository customerRepository,
             IFlavorRepository flavorRepository,
             INotifier notifier,
+            IMapper mapper,
             RepositoryBase baseRepository)
         {
             _context = baseRepository;
             _notifier = notifier;
+            _mapper = mapper;
             _baseService = new BaseService(_notifier);
             _customerRepository = customerRepository;
             _flavorRepository = flavorRepository;
         }
 
-        private async Task Validation(OrderView order)
+        private async Task Validation(OrderYesCustomerView order)
         {
-            if (!_baseService.ViewValidation(new OrderValidation(), order)) return;            
+            if (!_baseService.ViewValidation(new OrderYesCustomerValidation(), order)) return;
+
+            var customers = await _customerRepository.Query<Customer>("Select * from Customer nolock where email =@email", new { email = order.Email });
+            if (!customers.Any())
+            {
+                _notifier.SetNotification(new Notification("Cliente não encontrado"));
+                return;
+            }
+            _customer = customers.FirstOrDefault();
+
+            var selectFlavors = order.Items.Select(src => src.Flavors);
+            foreach (var idFlavors in selectFlavors)
+            {
+                foreach (var flavorId in idFlavors)
+                {
+                    var flavors = await _flavorRepository.Query<Flavor>("Select * from Flavor nolock where Id =@flavorId", new { flavorId });
+                    if (!flavors.Any())
+                    {
+                        _notifier.SetNotification(new Notification("Sabor não encontrado"));
+                        return;
+                    }
+                    _flavors.Add(flavors.FirstOrDefault());
+                }
+            }
+        }
+
+        private async Task Validation(OrderNoCustomerView order)
+        {
+            if (!_baseService.ViewValidation(new OrderValidation(), order)) return;
+
+            var customers = await _customerRepository.Query<Customer>("Select * from Customer nolock where email =@email", new { email = order.Email });
+            if (customers.Any())
+            {
+                _customer = customers.FirstOrDefault();                
+            }
 
             var selectFlavors = order.Items.Select(src => src.Flavors);
             foreach(var idFlavors in selectFlavors)
             {
                 foreach(var flavorId in idFlavors)
                 {
-                    var flavors = await _flavorRepository.Query<Flavor>("Select * from Flavor where Id =@flavorId", new { flavorId });
+                    var flavors = await _flavorRepository.Query<Flavor>("Select * from Flavor nolock where Id =@flavorId", new { flavorId });
                     if(!flavors.Any())
                     {
                         _notifier.SetNotification(new Notification("Sabor não encontrado"));
@@ -51,9 +91,71 @@ namespace Logstore.Data.Repository
                     _flavors.Add(flavors.FirstOrDefault());
                 }
             }
-        } 
+        }
 
-        public async Task Save(OrderView orderView, Customer customer)
+        private async Task Save(DateTime dateTime, IEnumerable<OrderItemView> orderItem)
+        {
+            //Prepare order
+            var order = new Order
+            {
+                DateCreate = dateTime,
+                CustomerId = _customer.Id
+            };
+
+            // save order
+            await _context.Insert(order);
+
+            // save order Address Delivery
+            var orderAddressDelivery = _mapper.Map<OrderAddressDelivery>(_customer);
+            orderAddressDelivery.OrderId = order.Id;
+            await _context.Insert(orderAddressDelivery);
+
+
+            // save items
+            foreach (var item in orderItem)
+            {
+                var orderitem = new OrderItem
+                {
+                    OrderId = order.Id,
+                };
+                await _context.Insert(orderitem);
+
+                // save flavors each item
+                foreach (var floavorId in item.Flavors)
+                {
+                    var flavor = _flavors.Where(src => src.Id == floavorId).FirstOrDefault();
+                    var orderitemFlavor = new OrderItemFlavor
+                    {
+                        OrderItemId = orderitem.Id,
+                        FlavorId = flavor.Id,
+                        Value = flavor.Price
+                    };
+                    await _context.Insert(orderitemFlavor);
+                }
+            }
+        }
+
+        public async Task Save(OrderYesCustomerView orderView)
+        {
+            try
+            {                
+                await Validation(orderView);
+                if (_notifier.HasNotification())
+                {
+                    return;
+                }
+                _context.Begin();
+                await Save(orderView.DateCreate, orderView.Items);                
+                _context.Commit();
+            }
+            catch (Exception ex)
+            {
+                _context.Rollback();
+                _notifier.SetNotification(new Notification("Não foi possível salvar esse registro, veja o erro:" + ex.Message));
+            }
+        }
+
+        public async Task Save(OrderNoCustomerView orderView)
         {
             try
             {  
@@ -65,50 +167,21 @@ namespace Logstore.Data.Repository
                 }
                 _context.Begin();
 
-                //Prepare order
-                var order = new Order
+                //Create customer             
+                if (_customer == null)
                 {
-                    DateCreate = orderView.DateCreate
-                };
-
-                //Create customer or get your Id
-                var customers = await _customerRepository.Query<long>("Select Id from Customer where email =@email", new { email = orderView.Email });
-                if (!customers.Any())
-                {
-                    //Create customer
+                    var customer = _mapper.Map<Customer>(orderView);
                     await _customerRepository.Insert(customer);
-                    order.CustomerId = customer.Id;
-                } else
-                {
-                    //Ger your Id
-                    order.CustomerId = customers.ToList().FirstOrDefault();
+                    _customer = customer;
                 }
-                
-                // save order
-                await _context.Insert(order);
-
-                // save items
-                foreach (var item in orderView.Items)
+                else
                 {
-                    var orderitem = new OrderItem
-                    {
-                        OrderId = order.Id,
-                    };
-                    await _context.Insert(orderitem);
-
-                    // save flavors each item
-                    foreach(var floavorId in item.Flavors)
-                    {
-                        var flavor = _flavors.Where(src => src.Id == floavorId).FirstOrDefault();
-                        var orderitemFlavor = new OrderItemFlavor
-                        {
-                            OrderItemId = orderitem.Id,
-                            FlavorId = flavor.Id,
-                            Value = flavor.Price
-                        };
-                        await _context.Insert(orderitemFlavor);
-                    }
+                    // The customer exists, but the delivery can be in another location
+                    var name = _customer.Name;
+                    _customer = _mapper.Map<Customer>(orderView);
+                    _customer.Name = name;
                 }
+                await Save(orderView.DateCreate, orderView.Items);                
                 _context.Commit();
                 
             }

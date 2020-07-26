@@ -15,6 +15,19 @@ namespace Logstore.Domain.Model
         public List<OrderItem> Items { get; set; }
     }
 
+    [Table("OrderAddressDelivery")]
+    public class OrderAddressDelivery:ModelBase
+    {
+        public long OrderId { get; set; }
+        public string Street { get; set; }
+        public string Number { get; set; }
+        public string Complement { get; set; }
+        public string Neighborhood { get; set; }
+        public string City { get; set; }
+        public string PostalCode { get; set; }
+        public string UF { get; set; }
+    }
+
     [Table("OrderItem")]
     public class OrderItem : ModelBase
     {

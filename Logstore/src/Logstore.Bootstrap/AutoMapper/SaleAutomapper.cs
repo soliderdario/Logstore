@@ -7,8 +7,10 @@ namespace Logstore.Bootstrap.AutoMapper
     public class SaleAutomapper : Profile
     {
         public SaleAutomapper()
-        {            
-            CreateMap<OrderView, Customer>();               
+        {
+            CreateMap<OrderNoCustomerView, Customer>();
+            CreateMap<Customer, OrderAddressDelivery>()
+                .ForMember(dest => dest.Id, act => act.Ignore());
         }
     }
 }

@@ -44,6 +44,7 @@ X:\GitHub\Logstore\Logstore\src\Logstore.Sale\obj\Debug\netcoreapp3.1\Logstore.S
 X:\GitHub\Logstore\Logstore\src\Logstore.Sale\obj\Debug\netcoreapp3.1\Logstore.Sale.AssemblyInfoInputs.cache
 X:\GitHub\Logstore\Logstore\src\Logstore.Sale\obj\Debug\netcoreapp3.1\Logstore.Sale.AssemblyInfo.cs
 X:\GitHub\Logstore\Logstore\src\Logstore.Sale\obj\Debug\netcoreapp3.1\Logstore.Sale.csproj.CoreCompileInputs.cache
+X:\GitHub\Logstore\Logstore\src\Logstore.Sale\obj\Debug\netcoreapp3.1\Logstore.Sale.MvcApplicationPartsAssemblyInfo.cs
 X:\GitHub\Logstore\Logstore\src\Logstore.Sale\obj\Debug\netcoreapp3.1\Logstore.Sale.MvcApplicationPartsAssemblyInfo.cache
 X:\GitHub\Logstore\Logstore\src\Logstore.Sale\obj\Debug\netcoreapp3.1\Logstore.Sale.RazorTargetAssemblyInfo.cache
 X:\GitHub\Logstore\Logstore\src\Logstore.Sale\obj\Debug\netcoreapp3.1\Logstore.Sale.csproj.CopyComplete
@@ -52,4 +53,3 @@ X:\GitHub\Logstore\Logstore\src\Logstore.Sale\obj\Debug\netcoreapp3.1\staticweba
 X:\GitHub\Logstore\Logstore\src\Logstore.Sale\obj\Debug\netcoreapp3.1\Logstore.Sale.dll
 X:\GitHub\Logstore\Logstore\src\Logstore.Sale\obj\Debug\netcoreapp3.1\Logstore.Sale.pdb
 X:\GitHub\Logstore\Logstore\src\Logstore.Sale\obj\Debug\netcoreapp3.1\Logstore.Sale.genruntimeconfig.cache
-X:\GitHub\Logstore\Logstore\src\Logstore.Sale\obj\Debug\netcoreapp3.1\Logstore.Sale.MvcApplicationPartsAssemblyInfo.cs

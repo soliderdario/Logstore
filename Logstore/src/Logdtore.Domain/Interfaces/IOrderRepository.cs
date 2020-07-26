@@ -7,7 +7,8 @@ namespace Logstore.Domain.Interfaces
 {
     public interface IOrderRepository
     {        
-        Task Save(OrderView orderView, Customer customer);
+        Task Save(OrderNoCustomerView orderView);
+        Task Save(OrderYesCustomerView orderView);
         Task Delete(long id);
         Task<IEnumerable<T>> Query<T>(string query, object parameters = null);
     }

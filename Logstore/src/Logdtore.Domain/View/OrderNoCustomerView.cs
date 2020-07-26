@@ -1,12 +1,24 @@
-﻿using Logstore.Domain.Interfaces;
-using Logstore.Domain.View;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using Logstore.Domain.Interfaces;
 
 namespace Logdtore.Domain.View
 {
-    public class OrderView: IValidation
+    public class OrderYesCustomerView : IValidation
+    {
+        [Required(ErrorMessage = "Campo {0} obrigatório")]
+        public DateTime DateCreate { get; set; }
+
+        [Required(ErrorMessage = "Campo {0} obrigatório")]
+        [StringLength(100, ErrorMessage = "O campo {0} precisa ter entre {2} e {1} caracteres", MinimumLength = 1)]
+        public string Email { get; set; }
+
+        [Required(ErrorMessage = "Campo {0} obrigatório")]
+        public List<OrderItemView> Items { get; set; }
+
+    }
+    public class OrderNoCustomerView: IValidation
     {        
 
         [Required(ErrorMessage = "Campo {0} obrigatório")]
