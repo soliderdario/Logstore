@@ -16,13 +16,13 @@ namespace Logstore.Data.Repository
     public class OrderRepository : IOrderRepository
     {
         private readonly RepositoryBase _context;
-        private readonly INotifier _notifier;
         private readonly BaseService _baseService;
+        private readonly List<Flavor> _flavors = new List<Flavor>();
+        private Customer _customer = null;
+        private readonly INotifier _notifier;
         private readonly ICustomerRepository _customerRepository;
         private readonly IFlavorRepository _flavorRepository;
         private readonly IMapper _mapper;
-        private readonly List<Flavor> _flavors = new List<Flavor>();
-        private Customer _customer = null;
 
         public OrderRepository(
             ICustomerRepository customerRepository,
@@ -39,19 +39,8 @@ namespace Logstore.Data.Repository
             _flavorRepository = flavorRepository;
         }
 
-        private async Task Validation(OrderYesCustomerView order)
+        private async Task PrepareFlavors(IEnumerable<List<long>> selectFlavors)
         {
-            if (!_baseService.ViewValidation(new OrderYesCustomerValidation(), order)) return;
-
-            var customers = await _customerRepository.Query<Customer>("Select * from Customer nolock where email =@email", new { email = order.Email });
-            if (!customers.Any())
-            {
-                _notifier.SetNotification(new Notification("Cliente não encontrado"));
-                return;
-            }
-            _customer = customers.FirstOrDefault();
-
-            var selectFlavors = order.Items.Select(src => src.Flavors);
             foreach (var idFlavors in selectFlavors)
             {
                 foreach (var flavorId in idFlavors)
@@ -67,6 +56,22 @@ namespace Logstore.Data.Repository
             }
         }
 
+        private async Task Validation(OrderYesCustomerView order)
+        {
+            if (!_baseService.ViewValidation(new OrderYesCustomerValidation(), order)) return;
+
+            var customers = await _customerRepository.Query<Customer>("Select * from Customer nolock where email =@email", new { email = order.Email });
+            if (!customers.Any())
+            {
+                _notifier.SetNotification(new Notification("Cliente não encontrado"));
+                return;
+            }
+            _customer = customers.FirstOrDefault();
+
+            var selectFlavors = order.Items.Select(src => src.Flavors);
+            await PrepareFlavors(selectFlavors);
+        }
+
         private async Task Validation(OrderNoCustomerView order)
         {
             if (!_baseService.ViewValidation(new OrderValidation(), order)) return;
@@ -78,19 +83,7 @@ namespace Logstore.Data.Repository
             }
 
             var selectFlavors = order.Items.Select(src => src.Flavors);
-            foreach(var idFlavors in selectFlavors)
-            {
-                foreach(var flavorId in idFlavors)
-                {
-                    var flavors = await _flavorRepository.Query<Flavor>("Select * from Flavor nolock where Id =@flavorId", new { flavorId });
-                    if(!flavors.Any())
-                    {
-                        _notifier.SetNotification(new Notification("Sabor não encontrado"));
-                        return;
-                    }
-                    _flavors.Add(flavors.FirstOrDefault());
-                }
-            }
+            await PrepareFlavors(selectFlavors);
         }
 
         private async Task Save(DateTime dateTime, IEnumerable<OrderItemView> orderItem)
