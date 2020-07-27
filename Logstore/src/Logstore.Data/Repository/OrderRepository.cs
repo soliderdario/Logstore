@@ -171,8 +171,10 @@ namespace Logstore.Data.Repository
                 else
                 {
                     // The customer exists, but the delivery can be in another location
+                    var id = _customer.Id;
                     var name = _customer.Name;
                     _customer = _mapper.Map<Customer>(orderView);
+                    _customer.UpdateId(id);
                     _customer.Name = name;
                 }
                 await Save(orderView.DateCreate, orderView.Items);                

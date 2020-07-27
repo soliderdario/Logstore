@@ -6,5 +6,11 @@ namespace Logdtore.Domain.Model
     {        
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long Id { get; internal set; }
+        public void UpdateId(long id)
+        {
+            Id = id;
+        }
     }
+
+    
 }

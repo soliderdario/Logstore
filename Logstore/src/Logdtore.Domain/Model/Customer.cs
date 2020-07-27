@@ -16,4 +16,6 @@ namespace Logstore.Domain.Model
         public string PostalCode { get; set; }
         public string UF { get; set; }
     }
+
+    
 }
