@@ -9,6 +9,8 @@
       "Logstore.Test/1.0.0": {
         "dependencies": {
           "Logstore.Domain": "1.0.0",
+          "Logstore.Menu": "1.0.0",
+          "Logstore.Person": "1.0.0",
           "Logstore.Sale": "1.0.0",
           "MSTest.TestAdapter": "2.1.0",
           "MSTest.TestFramework": "2.1.0",
@@ -1477,6 +1479,24 @@
           "Logstore.Infrastructure.dll": {}
         }
       },
+      "Logstore.Menu/1.0.0": {
+        "dependencies": {
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.0.1",
+          "Logstore.Bootstrap": "1.0.0"
+        },
+        "runtime": {
+          "Logstore.Menu.dll": {}
+        }
+      },
+      "Logstore.Person/1.0.0": {
+        "dependencies": {
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.0.1",
+          "Logstore.Bootstrap": "1.0.0"
+        },
+        "runtime": {
+          "Logstore.Person.dll": {}
+        }
+      },
       "Logstore.Sale/1.0.0": {
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.0.1",
@@ -2483,6 +2503,16 @@
       "sha512": ""
     },
     "Logstore.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Logstore.Menu/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Logstore.Person/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

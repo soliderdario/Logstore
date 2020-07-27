@@ -16,12 +16,9 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Logdtore.Domain\Logstore.Domain.csproj" />
+    <ProjectReference Include="..\Logstore.Menu\Logstore.Menu.csproj" />
+    <ProjectReference Include="..\Logstore.Person\Logstore.Person.csproj" />
     <ProjectReference Include="..\Logstore.Sale\Logstore.Sale.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Context\Menu\" />
-    <Folder Include="Context\Person\" />
   </ItemGroup>
 
 </Project>

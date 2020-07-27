@@ -132,3 +132,9 @@ X:\GitHub\Logstore\Logstore\src\Logstore.Test\bin\Debug\netcoreapp3.1\Logstore.I
 X:\GitHub\Logstore\Logstore\src\Logstore.Test\obj\Debug\netcoreapp3.1\Logstore.Test.csproj.CoreCompileInputs.cache
 X:\GitHub\Logstore\Logstore\src\Logstore.Test\obj\Debug\netcoreapp3.1\Logstore.Test.dll
 X:\GitHub\Logstore\Logstore\src\Logstore.Test\obj\Debug\netcoreapp3.1\Logstore.Test.pdb
+X:\GitHub\Logstore\Logstore\src\Logstore.Test\bin\Debug\netcoreapp3.1\Logstore.Menu.exe
+X:\GitHub\Logstore\Logstore\src\Logstore.Test\bin\Debug\netcoreapp3.1\Logstore.Menu.dll
+X:\GitHub\Logstore\Logstore\src\Logstore.Test\bin\Debug\netcoreapp3.1\Logstore.Menu.pdb
+X:\GitHub\Logstore\Logstore\src\Logstore.Test\bin\Debug\netcoreapp3.1\Logstore.Person.exe
+X:\GitHub\Logstore\Logstore\src\Logstore.Test\bin\Debug\netcoreapp3.1\Logstore.Person.dll
+X:\GitHub\Logstore\Logstore\src\Logstore.Test\bin\Debug\netcoreapp3.1\Logstore.Person.pdb
