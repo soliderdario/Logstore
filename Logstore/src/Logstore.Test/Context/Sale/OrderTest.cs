@@ -53,7 +53,12 @@ namespace Logstore.Test.Context.Sale
             entry.Items.Add(new OrderItemView
             {
                 Flavors = new List<long> { 10 },                
-            });            
+            });
+
+            entry.Items.Add(new OrderItemView
+            {
+                Flavors = new List<long> { 8,13 },
+            });
             var payload = System.Text.Json.JsonSerializer.Serialize(entry);
             var client = new SaleProvider()._client;
 

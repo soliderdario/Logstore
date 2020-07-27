@@ -67,4 +67,33 @@ namespace Logdtore.Domain.View
     {
         public List<long> Flavors { get; set; }
     }
+
+    public class OrderHistoryView
+    {
+        public long OrderId { get; set; }
+        public string CustomerName { get; set; }
+        public DateTime DateCreate { get; set; }
+        public double Total { get; set; }
+        public List<OrderHistoryItemView> Pizzas { get; set; }
+        public OrderHistoryView()
+        {
+            Pizzas = new List<OrderHistoryItemView>();
+        }
+    }
+
+    public class OrderHistoryItemView
+    {
+        public long OrderItemId { get; set; }
+        public List<OrderHistoryItemFlavorView> Flavors { get; set; }
+        public OrderHistoryItemView()
+        {
+            Flavors = new List<OrderHistoryItemFlavorView>();
+        }
+    }
+
+    public class OrderHistoryItemFlavorView
+    {
+        public string Flavor { get; set; }
+        public double Value { get; set; }
+    }
 }
