@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Logdtore.Domain.View;
 using Logstore.Domain.View;
+using Logstore.Test.Context.Person;
 
 namespace Logstore.Test.Context.Sale
 {
@@ -30,9 +31,9 @@ namespace Logstore.Test.Context.Sale
             };
            
             var payload = System.Text.Json.JsonSerializer.Serialize(entry);
-            var client = new SaleProvider()._client;            
+            var client = new PersonProvider()._client;            
 
-            var response = await client.PostAsync("/api/v1/Customer/save", new StringContent(payload, Encoding.UTF8, "application/json"));
+            var response = await client.PostAsync("/api/v1/Customer/save", new StringContent(payload, Encoding.UTF8, "application/json"));            
             response.EnsureSuccessStatusCode();
             Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
         }       
