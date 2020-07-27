@@ -92,7 +92,8 @@ namespace Logstore.Data.Repository
             var order = new Order
             {
                 DateCreate = dateTime,
-                CustomerId = _customer.Id
+                CustomerId = _customer.Id,
+                Total = _flavors.Sum(src => src.Price)
             };
 
             // save order

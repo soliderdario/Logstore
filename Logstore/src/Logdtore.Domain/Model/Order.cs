@@ -10,6 +10,7 @@ namespace Logstore.Domain.Model
     {
         public long CustomerId { get; set; }
         public DateTime DateCreate { get; set; }
+        public double Total{ get; set; }
 
         [Dapper.Contrib.Extensions.Write(false)]
         public List<OrderItem> Items { get; set; }
