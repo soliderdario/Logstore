@@ -22,7 +22,7 @@ namespace Logstore.Test.Context.Sale
                 Items = new List<OrderItemView>()
             };
             entry.Items.Add( new OrderItemView {
-                Flavors = new List<long> {8,13}            
+                Flavors = new List<long> {3,4}            
             });
             var payload = System.Text.Json.JsonSerializer.Serialize(entry);
             var client = new SaleProvider()._client;            
@@ -52,12 +52,12 @@ namespace Logstore.Test.Context.Sale
             };
             entry.Items.Add(new OrderItemView
             {
-                Flavors = new List<long> { 10 },                
+                Flavors = new List<long> { 3 },                
             });
 
             entry.Items.Add(new OrderItemView
             {
-                Flavors = new List<long> { 8,13 },
+                Flavors = new List<long> { 1,2 },
             });
             var payload = System.Text.Json.JsonSerializer.Serialize(entry);
             var client = new SaleProvider()._client;
